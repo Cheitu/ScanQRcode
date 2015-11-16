@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/brower_top">
+
+        <!-- 导航栏左边按钮 -->
+
+        <Button
+            android:id="@+id/nav_left_btn"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/close_brower"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible" >
+        </Button>
+       
+
+        <!-- 导航栏右边按钮 -->
+
+        <ImageButton
+            android:id="@+id/nav_right_btn"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_alignBaseline="@+id/nav_right_btn"
+            android:layout_alignBottom="@+id/nav_right_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:background="#00000000"
+            android:gravity="center"
+           
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/nav_center_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nav_right_btn"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignBottom="@+id/title"
+        android:background="@drawable/shape_line" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/brower"
+        android:layout_below="@id/title" />
+
+</RelativeLayout>
